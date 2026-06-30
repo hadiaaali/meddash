@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper-white: #ffffff;
+  --color-ink-black: #000000;
+  --color-carbon: #181818;
+  --color-ash: #6d6d6d;
+  --color-smoke: #9a9a9a;
+  --color-pewter: #808080;
+  --color-graphite: #636363;
+
+  --font-roobert: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-pill: 75px;
+  --radius-cards: 0px;
+  --radius-inputs: 0px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: var(--font-roobert);
+  background: #000000;
+}
+
+body {
+  margin: 0;
+  color: var(--color-carbon);
+  background: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.font-light-headline {
+  font-weight: 300;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out both;
+}
+
+@keyframes meddash-roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes meddash-drive {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.meddash-logo-robot {
+  animation: meddash-drive 2.4s ease-in-out infinite;
+}
+
+.meddash-logo-wheel-left {
+  transform-origin: 17px 36px;
+  animation: meddash-roll 1.2s linear infinite;
+}
+
+.meddash-logo-wheel-right {
+  transform-origin: 35px 36px;
+  animation: meddash-roll 1.2s linear infinite;
+}
+
+.frame-dark {
+  background: #000000;
+  color: #ffffff;
+}
+
+.frame-light {
+  background: #ffffff;
+  color: #181818;
+}
+
+.atmospheric-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(160, 224, 171, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 30% 70%, rgba(255, 172, 46, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 30%, rgba(165, 45, 37, 0.1) 0%, transparent 50%),
+    #000000;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid #181818;
+  outline-offset: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
