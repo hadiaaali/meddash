@@ -4,7 +4,7 @@ Prescription delivery prototype for university students — campus pharmacy to d
 
 ## Live demo
 
-After deployment: `https://<your-username>.github.io/meddash/`
+**https://hadiaaali.github.io/meddash/**
 
 ## Run locally
 
