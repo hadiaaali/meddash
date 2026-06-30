@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:pages": "GITHUB_PAGES=true tsc -b && vite build && cp dist/index.html dist/404.html",
+    "build:pages": "tsc -b && vite build --base /meddash/ && cp dist/index.html dist/404.html",
     "lint": "oxlint",
     "preview": "vite preview"
   },
