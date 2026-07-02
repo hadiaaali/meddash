@@ -12,7 +12,7 @@ export function NewOrder() {
     providerName: '',
     providerClinic: '',
     providerPhone: '',
-    dateSeen: '',
+    patientDateOfBirth: '',
     notes: '',
   })
 
@@ -23,7 +23,7 @@ export function NewOrder() {
     form.providerName.trim() &&
     form.providerClinic.trim() &&
     form.providerPhone.trim() &&
-    form.dateSeen
+    form.patientDateOfBirth
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -35,7 +35,7 @@ export function NewOrder() {
         clinic: form.providerClinic.trim(),
         phone: form.providerPhone.trim(),
       },
-      dateSeen: form.dateSeen,
+      patientDateOfBirth: form.patientDateOfBirth,
       notes: form.notes.trim() || undefined,
     })
 
@@ -83,11 +83,11 @@ export function NewOrder() {
                 onChange={(e) => update('providerPhone', e.target.value)}
               />
               <Input
-                label="Date you were seen"
+                label="Patient date of birth"
                 type="date"
-                value={form.dateSeen}
-                onChange={(e) => update('dateSeen', e.target.value)}
-                hint="Helps pharmacy verify the prescription"
+                value={form.patientDateOfBirth}
+                onChange={(e) => update('patientDateOfBirth', e.target.value)}
+                hint="Soharmaxys uses this to look up patients in their system"
               />
             </div>
           </div>

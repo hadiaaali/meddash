@@ -149,8 +149,8 @@ export function Tracking() {
           <p className="text-[18px] text-ash mt-2">{order.provider.clinic}</p>
           <p className="text-[18px] text-ash mt-1">{order.provider.phone}</p>
           <p className="text-[16px] text-smoke mt-4">
-            Seen{' '}
-            {new Date(order.dateSeen).toLocaleDateString('en-US', {
+            Date of birth{' '}
+            {new Date(order.patientDateOfBirth).toLocaleDateString('en-US', {
               month: 'long',
               day: 'numeric',
               year: 'numeric',

@@ -34,7 +34,7 @@ export interface PrescriptionOrder {
   medication?: string
   dosage?: string
   provider: ProviderInfo
-  dateSeen: string
+  patientDateOfBirth: string
   notes?: string
   stage: OrderStage
   createdAt: string
